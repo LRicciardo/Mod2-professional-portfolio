@@ -2,7 +2,8 @@
     --txt-color1: #fff;
     --txt-dark: black;
     /* --bg-color: #13293d; */
-    --bg-color1: blue;
+    /* --bg-color1: blue; */
+    --bg-color1: none;
     /* --bg-color2: yellow; */
     /* --bg-color3: red; */
     /* --bg-color4: black; */
@@ -16,7 +17,13 @@
     --bright-turquoise: #2aefcb;
     --gin: #e0eae4;
     --heliotrope: #e866ec;
-  }
+    --glow-color: white;
+}
+
+::selection {
+    background-color: var(--bg-color1);
+    color: var(--txt-dark)
+}
 
 
 /* Universal Selector affect every HTML element on the page */
@@ -106,7 +113,7 @@ nav {
 li {
     list-style-type: none;
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 2.5rem;
 }
 
 a {
@@ -145,63 +152,98 @@ footer p {
     margin-left: 2.5rem;
 }
 
+.justify-center {
+    justify-content: center;
+    margin-left: 2.5rem;
+}
+
 .content {
-    width: 75%;
+    width: 95%;
     /* display: inline-block; */
     display: flex;
-    margin-left: 2.0rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 20.0rem;
+    right: 0rem;
 }
 .content a {
-    width: 85vh;
+    /* width: 100vh; */
     /* display: inline-block; */
-    margin-left: 2.0rem;
+    margin-left: 0rem;
+    right: 0rem;
 }
 .main-content {
-    margin-bottom: 2.0rem;
-    padding: 5.0rem;
+    flex: 1 0 70%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    /* padding: 5.0rem; */
     height: 30.0rem;
     background-color: var(--bg-color1);
+    display: row;
 }
 
-.main-content img {
-    max-height: 200px;
+.mc-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--txt-color1);
+    /* outline: .2rem solid var(--border-color); */
+    outline-offset: -0.2rem;
+    transition: all 0.5s ease-in-out;
+}
+.mc-box .content-hdr {
+    position: relative;
+    margin: 6.5rem 0rem 0 -15rem;
+    height: 10rem;
+    width: 27rem;
+    padding: 0.5rem;
+    /* background-color: var(--outer-space); */
+    color: var(--txt-dark);
+    border: 0.2rem solid var(--border-color);
+    border-radius: 0.8rem;
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    justify-content: right;
 }
 
-.main-content h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
+.mc-box:hover,
+.mc-box:hover .content-hdr {
+    box-shadow:inset 0rem 0rem 2.8rem var(--glow-color), 0 0 var(--heliotrope);
 }
 
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    background-color: var(--bg-color1);
-}
-
-.bene-item {
-    margin-bottom: 32px;
-}
-
-.benefits h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-.benefits img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
 /* Media queries */
-@media screen and (max-width: 76.8rem) {
+/* @media screen and (max-width: 76.8rem) {
     nav {
       flex-direction: column;
     }
     .content {
         flex-direction: row;
     }
+  } */
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 76.8rem) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .main-content {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .main-content:last-child {
+      flex-grow: 1;
+    }
   }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 99.2rem) {
+    header {
+      width: 75%;
+    }
+  
+    .card-content {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
 

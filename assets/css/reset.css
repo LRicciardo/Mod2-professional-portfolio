@@ -1,0 +1,50 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* entire html */
+html {
+  /* Using percentages is helpful for varying veiwports */
+  /* Height defines the height of an element (minus padding, border and margin) */
+  height: 100%;
+}
+/* Entire body of webpage */
+body {
+  /* If content is smaller than viewport, content is stretched? */
+  min-height: 100%;
+  /* Adjusts line-height of each displayed line/element */
+  line-height: 1;
+  font-family: sans-serif;
+}
+
+/* lists all content headings 1-6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+/* CSS forms fields */
+input,
+select,
+option,
+optgroup,
+textarea,
+button,
+pre,
+code {
+  font-size: 100%;
+  /* inherit specifies a property should inherit its value from its parent element */
+  font-family: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}

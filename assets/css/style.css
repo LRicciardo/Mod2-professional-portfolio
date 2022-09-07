@@ -1,0 +1,207 @@
+:root {
+    --txt-color1: #fff;
+    --txt-dark: black;
+    /* --bg-color: #13293d; */
+    --bg-color1: blue;
+    /* --bg-color2: yellow; */
+    /* --bg-color3: red; */
+    /* --bg-color4: black; */
+    /* --bg-color5: white; */
+    --border-color: blue;
+    --size: 50px;
+    /* Sans Serif font stack is for a wide variety of screens and devices */
+    --font-fam: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --outer-space: #33393f;
+    --bright-turquoise: #2aefcb;
+    --gin: #e0eae4;
+    --heliotrope: #e866ec;
+  }
+
+
+/* Universal Selector affect every HTML element on the page */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* Element Selectors */
+html {
+    /* set 1rem to 10px. calc font-size = px values divided by 10 */
+    font-size: 62.5%;
+}
+/* Formats the body of the webpage */
+body {
+    font-family: var(font-fam);
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--txt-dark);
+    /* color: var(--gin); */
+    background-image: url("../images/page-old-grunge-notebook-7835554.jpg");
+    background-size: cover;
+    background-position: center;
+    /* background-color: var(--outer-space); */
+    background-color: var(--bg-color1);
+}
+
+header {
+    width: 100%;
+    padding: 2.5rem;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+header img {
+    padding: 0%;
+    border: .5rem var(--border-color) ridge;
+    margin: -2% 0 2% 20%;
+    height: 40rem;
+    width: 40rem;
+    transform: rotate(-15deg)
+    
+}
+/* Heading Housekeeping */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  /* color: var(--heliotrope); */
+  color: var(--txt-dark);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 4.0rem;
+}
+h2 {
+    font-size: 3.5rem;
+}
+h3 {
+    font-size: 3.0rem;
+}
+h4 {
+    font-size: 2.5rem;
+}
+h5 {
+    font-size: 2.0rem;
+}
+h6 {
+    font-size: 1.5rem;
+}
+
+nav {
+    padding-top: 1.5rem;
+    margin-right: 2.0rem;
+    float: right;
+    font-size: 2.0rem;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+a {
+    color:var(--txt-dark);
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+footer {
+    padding: 3.0rem;
+    clear: both;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2.0rem;
+    color: var(--txt-dark); 
+}
+
+footer p {
+    color: var(--txt-dark);
+}
+
+/* Class Selectors */
+
+.float-left {
+    float: left;
+    margin-right: 2.5rem;
+}
+
+.float-right {
+    float: right;
+    margin-left: 2.5rem;
+}
+
+.content {
+    width: 75%;
+    /* display: inline-block; */
+    display: flex;
+    margin-left: 2.0rem;
+}
+.content a {
+    width: 85vh;
+    /* display: inline-block; */
+    margin-left: 2.0rem;
+}
+.main-content {
+    margin-bottom: 2.0rem;
+    padding: 5.0rem;
+    height: 30.0rem;
+    background-color: var(--bg-color1);
+}
+
+.main-content img {
+    max-height: 200px;
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.benefits {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%;
+    background-color: var(--bg-color1);
+}
+
+.bene-item {
+    margin-bottom: 32px;
+}
+
+.benefits h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.benefits img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+/* Media queries */
+@media screen and (max-width: 76.8rem) {
+    nav {
+      flex-direction: column;
+    }
+    .content {
+        flex-direction: row;
+    }
+  }
+

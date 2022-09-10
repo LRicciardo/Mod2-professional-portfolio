@@ -138,11 +138,11 @@ body {
     background-image: url("../images/page-old-grunge-postit.jpg");
     position: relative;
     /* margin: 0.25rem 0.25rem 0.25rem 0.25rem; */
-    margin-top: -1rem;
+    /* margin-top: -1rem; */
     padding: 0.5rem;
     color: var(--txt-dark);
     border: 0.2rem solid var(--border-color);
-    border-radius: 0.8rem;
+    border-radius: 0.5rem;
     transition: all 0.5s ease-in-out;
     text-align: center;
     /* outline: .2rem solid var(--border-color); */
@@ -165,7 +165,7 @@ body {
 .TOP-a {
     /* align-items: baseline; */
     background-image: url("../images/page-old-grunge-postit.jpg");
-    position: absolute;
+    /* position: absolute; */
     margin: 50% 0rem 50% 0rem;
     /* height: 3.0rem; */
     /* width: 5rem; */
@@ -206,7 +206,8 @@ body {
 .foot-text {
     color: var(--txt-dark);
 }
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+/* using a mobile-first approach, use `min-width` values */
+/* going from narrow -> wide for a responsive design */
 @media screen and (min-width: 76.8rem) {
     /* on tablets, set columns to only be 50% of the width and not grow */
     .headshot {

@@ -16,6 +16,10 @@ The following image was a wireframe prior to working on the webpage.  (Changes h
 
 ![This Portfolio includes a navigation bar, a landing page background image, and 3 sections with the sub-headings on the side, A reurn to top-of-page button and more...](./READMEimages/M2-Challenge-Wireframe.jpg)
 
+Here is an inital html structure layout.  (Changes will be made as the project progress.):
+
+![HTML structure layout](./READMEimages/M2-Challenge-html-structure.jpeg)
+
 ## Installation
 
 No installation is required. 
@@ -32,8 +36,11 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-Although I had some help from classmates, this was a solo challenge and was completed as such.  
-I got the background off the internet (https://thumbs.dreamstime.com/b/page-old-grunge-notebook-7835554.jpg)
+Although I had some help from classmates, this was a solo challenge and was completed as such.
+The html chart was create with lucidchart.
+Pictures from the internet:
+   background: (https://thumbs.dreamstime.com/b/page-old-grunge-notebook-7835554.jpg)
+   favicon: (https://free.clipartof.com/16-Free-Vector-Illustration-Of-A-Star-Icon.jpg)
 
 ## License
 

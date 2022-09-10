@@ -1,231 +1,219 @@
+/* >>>>>>>>>>          universal veriables  */
 :root {
-    --txt-color1: #fff;
+    --txt-light: #fff;
     --txt-dark: black;
-    /* --bg-color: #13293d; */
-    /* --bg-color1: blue; */
     --bg-color1: none;
-    /* --bg-color2: yellow; */
-    /* --bg-color3: red; */
-    /* --bg-color4: black; */
-    /* --bg-color5: white; */
-    --border-color: blue;
+    --border-color: black;
     --size: 50px;
     /* Sans Serif font stack is for a wide variety of screens and devices */
     --font-fam: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    --outer-space: #33393f;
-    --bright-turquoise: #2aefcb;
-    --gin: #e0eae4;
-    --heliotrope: #e866ec;
     --glow-color: white;
 }
 
+/* >>>>>>>>>>          pseudo class elements */
 ::selection {
     background-color: var(--bg-color1);
     color: var(--txt-dark)
 }
 
-
-/* Universal Selector affect every HTML element on the page */
+/* >>>>>>>>>>  Universal Selector affect every HTML element on the page */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-/* Element Selectors */
+
+/* >>>>>>>>>>          Element Selectors */
 html {
     /* set 1rem to 10px. calc font-size = px values divided by 10 */
     font-size: 62.5%;
 }
+
 /* Formats the body of the webpage */
 body {
-    font-family: var(font-fam);
+    font-family: var(--font-fam);
     font-size: 1.75rem;
     line-height: 1.5;
     color: var(--txt-dark);
-    /* color: var(--gin); */
-    background-image: url("../images/page-old-grunge-notebook-7835554.jpg");
+    background-image: url("../images/page-old-grunge-notebook.jpg");
     background-size: cover;
     background-position: center;
-    /* background-color: var(--outer-space); */
-    background-color: var(--bg-color1);
+    margin: 2% auto;
 }
 
-header {
+/* >>>>>>>>>>          Class Element Selectors */
+/* ******************* landing page */
+.landing-page {
+    /* display: flex; */
     width: 100%;
-    padding: 2.5rem;
     height: 100vh;
+    position: relative;
+    /* outline: purple solid 1rem; */
+    margin: auto;
+}
+
+/* *****************headshot container */
+.headshot {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 75%;
     margin: 0 auto;
+    justify-content: center;
+    /* outline: black solid 1rem; */
+}
+
+.hs-img {
+    border: 1.0rem var(--border-color) solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height:auto;
+    /* outline: black solid 1rem; */
+    position: relative;
+    border-radius: 0.8rem;
+}
+.hs-img:hover {
+    border: 1.0rem var(--border-color) dashed;
+}
+.hs-heading {
     text-align: center;
-    
+    font-size: 200%;
+    padding: 1.5rem;
 }
-
-header img {
-    padding: 0%;
-    border: .5rem var(--border-color) ridge;
-    margin: -2% 0 2% 20%;
-    height: 40rem;
-    width: 40rem;
-    transform: rotate(-15deg)
-    
+/* *****************navigation bar container */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 5.5rem;
 }
-/* Heading Housekeeping */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.625rem;
-  /* color: var(--heliotrope); */
-  color: var(--txt-dark);
-  font-weight: 700;
-  line-height: 1.1;
-}
-
-h1 {
-    display: inline-block;
-    font-size: 4.0rem;
-}
-h2 {
-    font-size: 3.5rem;
-}
-h3 {
-    font-size: 3.0rem;
-}
-h4 {
-    font-size: 2.5rem;
-}
-h5 {
-    font-size: 2.0rem;
-}
-h6 {
-    font-size: 1.5rem;
-}
-
-nav {
-    padding-top: 1.5rem;
-    margin-right: 2.0rem;
-    float: right;
-    font-size: 2.0rem;
-}
-
-li {
+.nav-item {
     list-style-type: none;
     display: inline-block;
-    margin-left: 2.5rem;
+    padding: 0.5rem;
+    border: 0.5rem var(--border-color) solid;
+    border-radius: 0.8rem;
+    /* outline: white solid 1rem; */
 }
-
-a {
+.nav-ref {
     color:var(--txt-dark);
-    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;       
+    padding: 0.3rem;
+    /* outline: green solid 1rem; */
 }
 
-p {
-    font-size: 1.6rem;
-}
-
-footer {
-    padding: 3.0rem;
-    clear: both;
-    text-align: center;
-}
-
-footer h2 {
-    font-size: 2.0rem;
-    color: var(--txt-dark); 
-}
-
-footer p {
-    color: var(--txt-dark);
-}
-
-/* Class Selectors */
-
-.float-left {
-    float: left;
-    margin-right: 2.5rem;
-}
-
-.float-right {
-    float: right;
-    margin-left: 2.5rem;
-}
-
-.justify-center {
-    justify-content: center;
-    margin-left: 2.5rem;
-}
-
+/* ************************  main content */
 .content {
-    width: 95%;
-    /* display: inline-block; */
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 20.0rem;
+    margin-top: 5.0rem;
     right: 0rem;
-}
-.content a {
-    /* width: 100vh; */
-    /* display: inline-block; */
-    margin-left: 0rem;
-    right: 0rem;
-}
-.main-content {
-    flex: 1 0 70%;
-    padding: 1.5rem;
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
-    /* padding: 5.0rem; */
-    height: 30.0rem;
     background-color: var(--bg-color1);
-    display: row;
+    padding: 3%;
+    align-content: center;
+    outline: 2px white solid;
 }
 
 .mc-box {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     min-height: 100%;
-    padding: 2rem;
-    color: var(--txt-color1);
+    margin: 1rem 0rem 1rem 0rem;
+    color: var(--txt-dark);
     /* outline: .2rem solid var(--border-color); */
-    outline-offset: -0.2rem;
     transition: all 0.5s ease-in-out;
 }
-.mc-box .content-hdr {
+
+.mc-hdr {
     position: relative;
-    margin: 6.5rem 0rem 0 -15rem;
-    height: 10rem;
-    width: 27rem;
+    /* outline: .2rem solid var(--border-color); */
+}
+
+.mc-hdr-item {
+    background-image: url("../images/page-old-grunge-postit.jpg");
+    position: relative;
+    /* margin: 0.25rem 0.25rem 0.25rem 0.25rem; */
+    margin-top: -1rem;
     padding: 0.5rem;
+    color: var(--txt-dark);
+    border: 0.2rem solid var(--border-color);
+    border-radius: 0.8rem;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    /* outline: .2rem solid var(--border-color); */
+}
+.content-box {
+    position: relative;
+    margin: 0.55rem 0.55rem 0.55rem 0.55rem;
+    width: 90%;
+    color: var(--txt-dark);
+    border: 0.2rem solid var(--border-color);
+    justify-content: right;
+    /* outline: .2rem solid var(--border-color); */
+}
+
+.TOP-box {
+    position: relative;
+    outline: .2rem solid green;
+    }
+
+.TOP-a {
+    /* align-items: baseline; */
+    background-image: url("../images/page-old-grunge-postit.jpg");
+    position: absolute;
+    margin: 50% 0rem 50% 0rem;
+    /* height: 3.0rem; */
+    /* width: 5rem; */
+    /* padding: 0.5rem; */
     /* background-color: var(--outer-space); */
     color: var(--txt-dark);
     border: 0.2rem solid var(--border-color);
     border-radius: 0.8rem;
     transition: all 0.5s ease-in-out;
-    transform: rotate(-90deg);
-    justify-content: right;
+    /* transform: rotate(-90deg); */
+    /* justify-content: center; */
+    font-weight: bold;
+    text-decoration: none;
+    /* text-align: center; */
+    /* bottom: 0%; */
+    }
+
+/* When the cursor hovers over .mc-box,             */
+/* .mc-hdr-item will form a shadow inside and out   */
+.mc-box:hover .mc-hdr-item,
+.TOP-a:hover {
+    box-shadow:inset 1rem  1rem 2.0rem var(--glow-color), 
+                    -1rem -1rem 2.0rem var(--glow-color);
 }
 
-.mc-box:hover,
-.mc-box:hover .content-hdr {
-    box-shadow:inset 0rem 0rem 2.8rem var(--glow-color), 0 0 var(--heliotrope);
+/* ************************  footer area */
+.foot-area {
+    padding: 3.0rem;
+    clear: both;
+    text-align: center;
 }
 
-/* Media queries */
-/* @media screen and (max-width: 76.8rem) {
-    nav {
-      flex-direction: column;
-    }
-    .content {
-        flex-direction: row;
-    }
-  } */
-  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+.foot-heading {
+    font-size: 2.0rem;
+    color: var(--txt-dark); 
+}
+
+.foot-text {
+    color: var(--txt-dark);
+}
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 76.8rem) {
     /* on tablets, set columns to only be 50% of the width and not grow */
+    .headshot {
+      /* flex: 0 0 50%; */
+      max-width: 50%;
+    }
+
     .main-content {
       flex: 0 0 50%;
       max-width: 50%;
@@ -235,10 +223,10 @@ footer p {
     .main-content:last-child {
       flex-grow: 1;
     }
-  }
+}
   
-  /* media query for larger screens */
-  @media screen and (min-width: 99.2rem) {
+/* media query for larger screens */
+@media screen and (min-width: 99.2rem) {
     header {
       width: 75%;
     }
@@ -246,4 +234,5 @@ footer p {
     .card-content {
       flex: 0 0 33.333%;
       max-width: 33.333%;
-
+    }
+}

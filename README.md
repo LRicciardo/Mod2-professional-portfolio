@@ -12,7 +12,7 @@ Hope you enjoy!
 
 ## WireFrame
 
-The following image was a wireframe prior to working on the webpage.  (Changes have been made.):
+The following image was a wireframe prior to working on the webpage.  (Changes have been made. The design scaled back to a more simple design.):
 
 ![This Portfolio includes a navigation bar, a landing page background image, and 3 sections with the sub-headings on the side, A reurn to top-of-page button and more...](./READMEimages/M2-Challenge-Wireframe.jpg)
 
@@ -32,7 +32,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-Although I had some help from classmates, this was a solo challenge and was completed as such. 
+Although I had some help from classmates, this was a solo challenge and was completed as such.  
+I got the background off the internet (https://thumbs.dreamstime.com/b/page-old-grunge-notebook-7835554.jpg)
 
 ## License
 

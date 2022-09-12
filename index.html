@@ -15,15 +15,19 @@
         <!-- Web Page Header containing Navigation area -->
         <header class="landing-page">
             <div class="lp-navbar">
-                <div class="headshot">
-                    <img class="hs-img" src="./assets/images/Liane-HeadShot-2022-09.jpg"  
-                    alt="Image of Liane Ricciardo" 
+                <figure class="headshot">
+                    <img 
+                        class="hs-img" 
+                        src="./assets/images/Liane-HeadShot-2022-09.jpg"  
+                        alt="Image of Liane Ricciardo" 
+                        width="300"
+                        height="300"
                     />
-                    <div class="hs-heading">
-                        <!-- Liane Ricciardo<br>Web Developer Extraordinaire -->
-                        <h1 class="hdr-title">Liane Ricciardo ** Web Developer Extraordinaire</h1>
-                    </div>
-                </div>
+                    <figcaption class="hs-hdg">
+                        Liane Ricciardo<br>Web Developer Extraordinaire
+                        <!-- <h1 class="hdg-title">Liane Ricciardo ** Web Developer Extraordinaire</h1> -->
+                    </figcaption>
+                </figure>
                 <!-- List items in navigation bar -->
                 <nav class="navbar">
                     <ul class="nav-list">
@@ -41,69 +45,130 @@
             </div>
         </header>
         
-        <!-- Main Content of WebPage  -->
-        <div class="content">
-            <!-- Section 1: My Story container -->
-            <section class="main-content" id="my-story">
-                <figure class="mc-box">
-                    <div class="mc-hdr">
-                        <h2 class="mc-hdr-item">My<br>Story</h2>
-                    </div>
-                    <div class="content-box">
-                        <p>
+               <!-- Section 1: My Story container -->
+        <section class="story-content" id="my-story">
+            <figure class="story-box">
+                <div class="story-hdg">
+                    <h2 class="story-hdg-item">My<br>Story</h2>
+                </div>
+                <div class="story-item">
+                    <pre>
                         Just a small town girl
                         Livin' in a lonely world
                         She took the midnight train going anywhere
                         Courtesy of Journey..
-                        </p>
-                    </div>
-                    <div class="TOP-box">
-                        <a class="TOP-a" href="#top">TOP</a>
-                    </div>
-                </figure>
-            </section>
+                        
+                        Blah... Blah 20+ years experience main frame batch programming.
+                        Blah... Blah with such programming languages as CoBOL, RPG, Fortran, Basic
+                        Blah... Blah and working JCL and interfaces to PCs ...
+                        Blah... Blah printer markup language and call station queues
+                        Blah... Blah  2M subscriber/reader database ....
+                        
+                        Blah.. Blah felt like a dinosaur.... Needed new skills
+                        
+                        Blah.. blah ... Back to school   Yeah!!!
+                        
+                        Now looking to continue exploring new territories in Web Development.
+                    </pre>
+                </div>
+                <div class="TOP-box">
+                    <a class="TOP-a" href="#top">TOP</a>
+                </div>
+            </figure>
+        </section>
+        
+        <!-- Section 2: My Skills Gallery container -->
+        <section class="skills-content" id="my-skills-gallery">
+            <figure class="skills-box">
+                <div class="skills-hdg">
+                    <h2 class="skills-hdg-item">My Skills<br>Gallery</h2>
+                </div>
                 
-            <!-- Section 2: My Skills Gallery container -->
-            <section class="main-content" id="my-skills-gallery">
-                <figure class="mc-box">
-                    <div class="mc-hdr">
-                        <h2 class="mc-hdr-item">My Skills<br>Gallery</h2>
-                    </div>
-                    <div class="content-box">
-                        <p>
-                        The following are links to my skills:
-                        </p>
-                    </div>
-                    <div class="TOP-box">
-                        <a class="TOP-a" href="#top">TOP</a>
-                    </div>
-                </figure>
-            </section>
-            
-            <!-- Section 3: My Contact information container -->
-            <section class="main-content" id="my-contact">
-                <figure class="mc-box">
-                    <div class="mc-hdr">
-                        <h2 class="mc-hdr-item">Contact<br>Me</h2>
-                    </div>
-                    <div class="content-box">
-                        <p>
-                        This is how you can contact me.
-                        </p>
-                        <pre> My Phone/Text Messsage</pre>
-                        <pre> My Email</pre>
-                        <pre> My LinkdIn</pre>
-                    </div>
-                    <div class="TOP-box">
-                        <a class="TOP-a" href="#top">TOP</a>
-                    </div>
-                </figure>
-            </section>
-        </div>
+                <div class="skills-items">
+                    <section class="skills-card">
+                        <figure class="skills-fig">
+                                <img 
+                                    class="skills-img" 
+                                    src="./assets/images/01-html-css-git-homework-demo.png" 
+                                    alt="skill 1"
+                                />
+                            <figcaption class="skills-cap"> 
+                                Project to fix a problem and make more browser accessibile.
+                            </figcaption>
+                        </figure>
+                    </section>
+
+                    <section class="skills-card">
+                        <figure class="skills-fig">
+                            <img 
+                                class="skills-img" 
+                                src="./assets/images/01-html-css-git-homework-demo.png" 
+                                alt="skill 1"
+                            />
+                            <figcaption class="skills-cap"> 
+                                Project to fix a problem and make more browser accessibile.
+                            </figcaption>
+                        </figure>
+                    </section>
+
+                    <section class="skills-card">
+                        <figure class="skills-fig">
+                            <img 
+                                class="skills-img" 
+                                src="./assets/images/01-html-css-git-homework-demo.png" 
+                                alt="skill 1"
+                            />
+                            <figcaption class="skills-cap"> 
+                                Project to fix a problem and make more browser accessibile.
+                            </figcaption>
+                        </figure>
+                    </section>
+                </div>
+
+                <div class="TOP-box">
+                    <a class="TOP-a" href="#top">TOP</a>
+                </div>
+            </figure>
+        </section>
+
+
+        <!-- Section 3: My Contact information container -->
+        <section class="contact-content" id="my-contact">
+            <figure class="contact-box">
+                <div class="contact-hdg">
+                    <h2 class="contact-hdg-item">Contact<br>Me</h2>
+                </div>
+                <div class="contact-list">
+                    <!-- <p class="cb-hdg"> -->
+                    <!-- This is how you can contact me. -->
+                    <!-- </p> -->
+                    <ul class="cl-list">
+                        <!-- List item 1: Email information -->
+                        <li class="cl-item" id="email">
+                            <strong>Email:</strong> 
+                            <a href="#">Liane.Ricciardo@gmail.com</a>
+                        </li>
+                        <!-- List item 2: GitHub link -->
+                        <li class="cl-item" id="linkedin">
+                            <strong>Linkedin:</strong>
+                            <a href="#">Coming Soon</a>
+                        </li>
+                        <!-- List item 3: Portfolio WebPage Link -->
+                        <li class="cl-item" id="phone"> 
+                            <strong>Phone/Text:</strong> 
+                            <a href="#">yeah right!</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="TOP-box">
+                    <a class="TOP-a" href="#top">TOP</a>
+                </div>
+            </figure>
+        </section>
  
         <!-- Web Page Footer area -->
         <footer class="foot-area">
-            <h2 class="foot-heading">I love Web Development!</h2>
+            <h2 class="foot-hdg">I love Web Development!</h2>
             <p class="foot-text">
                 &copy; 2022 Liane Ricciardo  Pick My Code
             </p>

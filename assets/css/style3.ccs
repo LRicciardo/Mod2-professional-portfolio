@@ -57,26 +57,22 @@ body {
 .headshot {
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: 33%;
+    height: 75%;
+    width: 75%;
     margin: 0 auto;
     justify-content: center;
     /* outline: black solid 1rem; */
 }
 
-.hs-img,
-.skills-img {
+.hs-img {
+    border: 1.0rem var(--border-color) solid;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     height:auto;
     /* outline: black solid 1rem; */
-    /* position: relative; */
-}
-
-.hs-img {
-    border: 1.0rem var(--border-color) solid;
+    position: relative;
     border-radius: 0.8rem;
 }
 .hs-img:hover {
@@ -85,8 +81,6 @@ body {
 .hs-hdg {
     text-align: center;
     font-size: 200%;
-    font-weight: 700;
-    /* font- */
     padding: 1.5rem;
 }
 /* *****************navigation bar container */
@@ -112,49 +106,41 @@ body {
     /* outline: green solid 1rem; */
 }
 
-/* *********story/skills/contact common elements */
-.story-content,
-.skills-content,
-.contact-content {
-    width: 80%;
-    margin-left: 15%;
+/* ************************  main content */
+.content {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    /* margin-top: 5.0rem; */
+    flex-direction: column;
+    margin-top: 5.0rem;
     right: 0rem;
     background-color: var(--bg-color1);
-    padding: 0%;
+    padding: 3%;
     align-content: center;
     /* outline: 2px white solid; */
-    width: 80%;
-    margin-left: 15%;
+}
+
+.main-content {
+    width: 100%;
     height: 100vh;
 }
 
-.story-box,
-.skills-box,
-.contact-box {
+.mc-box {
     display: flex;
-    /* flex-wrap: wrap; */
-    flex-direction: row;
-    min-height: 100vh;
-    margin: 5rem 0rem 1rem 0rem;
+    flex-wrap: wrap;
+    min-height: 100%;
+    margin: 1rem 0rem 1rem 0rem;
     color: var(--txt-dark);
     /* outline: .2rem solid var(--border-color); */
     transition: all 0.5s ease-in-out;
 }
 
-.story-hdg, 
-.skills-hdg, 
-.contact-hdg {
+.mc-hdg {
     position: relative;
     /* outline: .2rem solid var(--border-color); */
 }
 
-.story-hdg-item, 
-.skills-hdg-item, 
-.contact-hdg-item {
+.mc-hdg-item {
     background-image: url("../images/page-old-grunge-postit.jpg");
     position: relative;
     /* margin: 0.25rem 0.25rem 0.25rem 0.25rem; */
@@ -167,21 +153,30 @@ body {
     text-align: center;
     /* outline: .2rem solid var(--border-color); */
 }
-
-/* ************************  my story content */
-
-.story-item {
-    /* position: relative; */
-    /* margin: 0.55rem 0.55rem 0.55rem 0.55rem; */
-    max-width: 90%;
+.content-box {
+    position: relative;
+    margin: 0.55rem 0.55rem 0.55rem 0.55rem;
+    width: 90%;
     color: var(--txt-dark);
-    /* border: 0.2rem solid var(--border-color); */
-    justify-content: center;
+    border: 0.2rem solid var(--border-color);
+    justify-content: right;
     /* outline: .2rem solid var(--border-color); */
+    list-style-type: circle;
+    text-decoration: solid black;
+}
+.content-box {
+    position: relative;
+    margin: 0.55rem 0.55rem 0.55rem 0.55rem;
+    width: 90%;
+    color: var(--txt-dark);
+    border: 0.2rem solid var(--border-color);
+    justify-content: right;
+    /* outline: .2rem solid var(--border-color); */
+    list-style-type: circle;
+    text-decoration: solid black;
 }
 
-/* ************************  my skills content */
-.skills-items {
+.skills {
     flex: 1;
     background-color: var(--bg-color1);
     padding: 1rem;
@@ -197,57 +192,52 @@ body {
     padding: 10px;
     flex: 0 0 30.0rem;
     /* transform: rotate(8deg); */
-    box-shadow: 10px 10px 5px black;
-    margin: 20px;
-    background-image: url("../images/page-old-grunge-postit.jpg");
-}
-
-/* this code increases container and changes the shadow */
-/*     when selected */
-.skills-card:hover {
-    transform: scale(1.1);
-    box-shadow: 10px 10px 5px white;
+    box-shadow: 10px 10px 5px #aaaaaa;
     margin: 20px;
 }
 
-
-.skills-img {
-    border-radius: var(--size) var(--size) 0 0;
-    /* outline: black solid 1rem; */
-    /* position: relative; */
+.skills-fig {
+    max-width: 100%;
+    height: auto;
 }
 
-.skills-cap {
+.skills-card > p {
     text-align: center;
-    font-weight: 500;
-    /* max-width: 100%; */
-    /* height: auto; */
 }
 
-/* top of page jumper */
+.card > img {
+    width: 100%;
+}
+
 .TOP-box {
     position: relative;
-    bottom: 1 rem;
     /* outline: .2rem solid green; */
     }
 
 .TOP-a {
+    /* align-items: baseline; */
     background-image: url("../images/page-old-grunge-postit.jpg");
+    /* position: absolute; */
     margin: 50% 0rem 50% 0rem;
+    /* height: 3.0rem; */
+    /* width: 5rem; */
+    /* padding: 0.5rem; */
+    /* background-color: var(--outer-space); */
     color: var(--txt-dark);
     border: 0.2rem solid var(--border-color);
     border-radius: 0.8rem;
     transition: all 0.5s ease-in-out;
+    /* transform: rotate(-90deg); */
+    /* justify-content: center; */
     font-weight: bold;
     text-decoration: none;
-}
+    /* text-align: center; */
+    /* bottom: 0%; */
+    }
 
 /* When the cursor hovers over .mc-box,             */
 /* .mc-hdg-item will form a shadow inside and out   */
 .mc-box:hover .mc-hdg-item,
-.story-box:hover .story-hdg-item,
-.skills-box:hover .skills-hdg-item,
-.contact-box:hover .contact-hdg-item,
 .TOP-a:hover {
     box-shadow:inset 1rem  1rem 2.0rem var(--glow-color), 
                     -1rem -1rem 2.0rem var(--glow-color);
@@ -270,32 +260,32 @@ body {
 }
 /* using a mobile-first approach, use `min-width` values */
 /* going from narrow -> wide for a responsive design */
-/* @media screen and (min-width: 76.8rem) { */
+@media screen and (min-width: 76.8rem) {
     /* on tablets, set columns to only be 50% of the width and not grow */
-    /* .headshot { */
+    .headshot {
       /* flex: 0 0 50%; */
-      /* max-width: 50%; */
-    /* } */
+      max-width: 50%;
+    }
 
-    /* .main-content { */
-      /* flex: 0 0 50%; */
-      /* max-width: 50%; */
-    /* } */
+    .main-content {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
   
     /* select the last child to grow to full width if it has space to grow */
-    /* .main-content:last-child { */
-      /* flex-grow: 1; */
-    /* } */
-/* } */
+    .main-content:last-child {
+      flex-grow: 1;
+    }
+}
   
 /* media query for larger screens */
-/* @media screen and (min-width: 99.2rem) { */
-    /* .landing-page { */
-      /* width: 75%; */
-    /* } */
+@media screen and (min-width: 99.2rem) {
+    .landing-page {
+      width: 75%;
+    }
   
-    /* .card-content { */
-      /* flex: 0 0 33.333%; */
-      /* max-width: 33.333%; */
-    /* } */
-/* } */
+    .card-content {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+}
